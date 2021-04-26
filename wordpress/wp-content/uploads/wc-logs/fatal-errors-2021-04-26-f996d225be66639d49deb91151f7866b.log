@@ -1,0 +1,11 @@
+2021-04-26T07:37:31+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\wamp64\www\wordpress\wp-includes\Requests\Transport\cURL.php on line 162
+
+2021-04-26T07:39:35+00:00 CRITICAL Uncaught Error: Class 'IXR_Client' not found in C:\wamp64\www\wordpress\wp-includes\IXR\class-IXR-clientmulticall.php:8
+Stack trace:
+#0 C:\wamp64\www\wordpress\wp-includes\class-IXR.php(48): require_once()
+#1 C:\wamp64\www\wordpress\wp-content\plugins\jetpack\vendor\automattic\jetpack-connection\legacy\load-ixr.php(12): require_once('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wordpress\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-version-loader.php(89): require_once('C:\\wamp64\\www\\w...')
+#3 C:\wamp64\www\wordpress\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-autoloader-handler.php(124): Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3cjetpack\Version_Loader->load_filemap()
+#4 C:\wamp64\www\wordpress\wp-content\plugins\jetpack\vendor\jetpack-autoloader\class-autoloader.php(80): Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3cjetpack\Autoloader_Handler->activate_autoloader(Array)
+#5 C:\wamp64\www\wordpress\wp-content\plugins\jetpack\vendor\autoload_pac in C:\wamp64\www\wordpress\wp-includes\IXR\class-IXR-clientmulticall.php on line 8
+
