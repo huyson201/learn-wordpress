@@ -1,0 +1,4 @@
+::1 - - [26/Apr/2021:15:52:41 +0700] "GET / HTTP/1.1" 200 8613 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [26/Apr/2021:15:52:58 +0700] "GET /favicon.ico HTTP/1.1" 500 623 "http://wordpress.localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [26/Apr/2021:15:53:10 +0700] "GET / HTTP/1.1" 200 8613 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [26/Apr/2021:15:53:10 +0700] "GET /favicon.ico HTTP/1.1" 500 623 "http://wordpress.localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
