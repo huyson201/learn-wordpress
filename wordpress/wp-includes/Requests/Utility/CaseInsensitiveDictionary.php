@@ -1,1 +1,103 @@
-ÁE3uà”:¡ëÙn3uì‹}3}‹]3}ø‰UğÑÆÁÂUü‰uàú‹U´3UÔÁEø3UÜ3]ø3Uè´>¡ëÙnÑÂ‹şÁÇ}‰uô‹uğ3Ş‰UÜß¼¡ëÙn‹U¼3UĞÁÆ3UØ‰}ü3UäÑÂ‰UØ‹]ø3Ş3]ôÁÇ}ß¼¡ëÙnÁEô‹U°3UÌ‹]ü3UÔ3Ş3Uà3]ôÑÂ‰UÔ‰}ÁÇ}øßÁEü¼¡ëÙn‹U¸3UÈ‹]ü3UĞ3]3UÜ3]ôÑÂ‰UĞ‰}ÁÇşßÁE´¡ëÙn‹UÄ3UÌ‹}3UØ#}3Uì‰uøÑÂ‰Uğ‰UÌ‹UUÁÆ#Uü×UôUğÁE´2Ü¼‹UÀ3UÈ‹}3UÔ#}ø3Uè‰uğÑÂ‰Uô‰UÈ‹UUøÁÆ#U×UüUôÁEø´2Ü¼‹U´3UÄ‰uô3UĞ3UäÑÂ‰Uü‰UÄ‹UøUğ‹}ø#U#}ğÁÆ×UUüÁEğ´2Ü¼‹U¼3UÀ‹}ğ3UÌ#}ô3Uà‰uüÑÂ‰U‰UÀ‹UğUôÁÆ#Uø×U‹}üUÁEô´2Ü¼‹U°3U´#}ô3UÈ‰u3UÜÑÂ‰U‰U´‹UüUôÁÆ#Uğ×UøUÁEü´2Ü¼‹U¸3U¼‹}ü3UÄ#}3UØ‰uÑÂ‰Uø‰U¼‹UüUÁÆ#Uô×UğUøÁE´2Ü¼‹U°3UÀ‰uø3UÔ3UìÑÂ‰Uğ‰U°‹UÁÆU‹}#Uü#}×UôUğÁE´2Ü¼‹U¸3U´‹}3UĞ#}ø3Uè‰uğÑÂ‰Uô‰U¸‹UUøÁÆ#U×UüUôÁEø´2Ü¼‹U¼3UÌ‹}ø3Uä#}ğ3Uì‰uôÑÂ‰Uü‰Uì‹UøUğÁÆ#U×UUüÁEğ´2Ü¼‹U°3UÈ‹}ğ3Uà#}ô3Uè‰uüÑÂ‰U‰Uè‹UğUôÁÆ#Uø×U‹}üUÁEô#}ô´2Ü¼‹U¸3UÄ‰u3UÜ3UäÑÂ‰U‰Uä‹UüUôÁÆ#Uğ×UøUÁEü´2Ü¼‹UÀ3UØ‹}ü3Uà#}3Uì‰uÑÂ‰Uø‰Uà‹UüUÁÆ#Uô×UğUøÁE´2Ü¼‹U´3UÔ‹}3UÜ#}3Uè‰uøÑÂ‰Uğ‰UÜ‹UUÁÆ#Uü×UôUğÁE´2Ü¼‹U¼3UĞ‹}3UØ#}ø3Uä‰uğÑÂ‰Uô‰UØ‹UUøÁÆ#U×UüUôÁEø‹}ø´2Ü¼‹U°3UÌ#}ğ3UÔ‰uô3UàÑÂ‰Uü‰UÔ‹UøUğÁÆ#U×UUüÁEğ´2Ü¼‰uü‹U¸3UÈ‹}ğ3UĞ#}ô3UÜÑÂ‰U‰UĞ‹UğUôÁÆ#Uø×U‹}üUÁEô´2Ü¼‹UÄ3UÌ#}ô3UØ‰u3UìÑÂ‰U‰UÌ‹UüUôÁÆ#Uğ×UøUÁEü´2Ü¼‹UÀ3UÈ‹}ü3UÔ#}3Uè‰uÑÂ‰Uø‰UÈ‹UüUÁÆ#Uô×UğUøÁE´2Ü¼‹U´3UÄ‹}3UĞ#}3Uä‰uøÑÂ‰Uğ‰UÄ‹UUÁÆ#Uü×UôUğÁE´2Ü¼‹U¼3UÀ‰uğ3UÌ3UàÑÂÁÆ‹}#}ø‰Uô‰UÀ‹UUø#U×Uü‹}UôÁEø3}ø´2Ü¼3}ğ‹U°3U´‰uô3UÈ3UÜÑÂÁÆuú¼7ÖÁbÊÁEğ‹u¸3u¼‰}ü3uÄ3uØÑÆ‰u¼‹uø3uğÁÇ3uô}u¼ÁEô¼>ÖÁbÊ‹u°3uÀ‰}3uÔ3uìÑÆ‰u°‹uü3uğÁÇ3uô}øu°ÁEü¼>ÖÁbÊ‹u¸3ò3uĞ‰}3uèÑÆ‰u¸‹uü3uÁÇ3uô}ğu¸ÁE¼>ÖÁbÊ‹u¼3uÌ‰}ø3uä3uìÑÆ‰uì‹uüÁÇ3u}ô3uuìÁE¼>ÖÁbÊ‹u°3uÈ‰}ğ3uà3uèÑÆ‰uè‹u3uÁÇ3uø}üuèÁEø¼>ÖÁbÊ‹u¸3uÄ‰}ô3uÜ3uäÑÆ‰uä‹u3uøÁÇ3uğ}uäÁEğ¼>ÖÁbÊ‹uÀ3uØ‰}ü3uà3uìÑÆ‰uà‹uø3uğÁÇ3uô}uàÁEô¼>ÖÁbÊ‹ò3uÔ‰}3uÜ3uèÑÆ‰uÜ‹uü3uğÁÇ3uô}øuÜÁEü¼>ÖÁbÊ‹u¼3uĞ‰}3uØ3uäÑÆ‰uØ‹uü3uÁÇ3uôuØ}ğ¼>ÖÁbÊ‰}øÁE‹u°3uÌ3uÔ3uàÑÆ‰uÔ‹uü3uÁÇ3u}ôuÔÁE¼>ÖÁbÊ‹u¸3uÈ‰}ğ3uĞ3uÜ
+<?php
+/**
+ * Case-insensitive dictionary, suitable for HTTP headers
+ *
+ * @package Requests
+ * @subpackage Utilities
+ */
+
+/**
+ * Case-insensitive dictionary, suitable for HTTP headers
+ *
+ * @package Requests
+ * @subpackage Utilities
+ */
+class Requests_Utility_CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
+	/**
+	 * Actual item data
+	 *
+	 * @var array
+	 */
+	protected $data = array();
+
+	/**
+	 * Creates a case insensitive dictionary.
+	 *
+	 * @param array $data Dictionary/map to convert to case-insensitive
+	 */
+	public function __construct(array $data = array()) {
+		foreach ($data as $key => $value) {
+			$this->offsetSet($key, $value);
+		}
+	}
+
+	/**
+	 * Check if the given item exists
+	 *
+	 * @param string $key Item key
+	 * @return boolean Does the item exist?
+	 */
+	public function offsetExists($key) {
+		$key = strtolower($key);
+		return isset($this->data[$key]);
+	}
+
+	/**
+	 * Get the value for the item
+	 *
+	 * @param string $key Item key
+	 * @return string Item value
+	 */
+	public function offsetGet($key) {
+		$key = strtolower($key);
+		if (!isset($this->data[$key])) {
+			return null;
+		}
+
+		return $this->data[$key];
+	}
+
+	/**
+	 * Set the given item
+	 *
+	 * @throws Requests_Exception On attempting to use dictionary as list (`invalidset`)
+	 *
+	 * @param string $key Item name
+	 * @param string $value Item value
+	 */
+	public function offsetSet($key, $value) {
+		if ($key === null) {
+			throw new Requests_Exception('Object is a dictionary, not a list', 'invalidset');
+		}
+
+		$key = strtolower($key);
+		$this->data[$key] = $value;
+	}
+
+	/**
+	 * Unset the given header
+	 *
+	 * @param string $key
+	 */
+	public function offsetUnset($key) {
+		unset($this->data[strtolower($key)]);
+	}
+
+	/**
+	 * Get an iterator for the data
+	 *
+	 * @return ArrayIterator
+	 */
+	public function getIterator() {
+		return new ArrayIterator($this->data);
+	}
+
+	/**
+	 * Get the headers as an array
+	 *
+	 * @return array Header data
+	 */
+	public function getAll() {
+		return $this->data;
+	}
+}

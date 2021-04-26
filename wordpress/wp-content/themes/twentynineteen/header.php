@@ -1,15 +1,53 @@
-2284| E2: ReadAdapterBridgeFlag: bridge param key doesn't exist: 'SYSTEM\CurrentControlSet\Services\VMnetBridge\Parameters\Adapters\{A6F7AB41-1EEB-4E88-93D0-5030C0102778}'
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT GARP
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT SMAC
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: no need to modify registry: 0x00000000
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| E2: ReadAdapterBridgeFlag: bridge param key doesn't exist: 'SYSTEM\CurrentControlSet\Services\VMnetBridge\Parameters\Adapters\{0504DA6E-006D-4EA0-87F0-ADD01ACC22BB}'
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT GARP
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT SMAC
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: no need to modify registry: 0x00000000
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| E2: ReadAdapterBridgeFlag: bridge param key doesn't exist: 'SYSTEM\CurrentControlSet\Services\VMnetBridge\Parameters\Adapters\{46A0E039-CF7B-4073-9B3A-6DAF4B70F758}'
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT GARP
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT SMAC
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: no need to modify registry: 0x00000000
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| E2: ReadAdapterBridgeFlag: bridge param key doesn't exist: 'SYSTEM\CurrentControlSet\Services\VMnetBridge\Parameters\Adapters\{4C82E46B-2028-4B1F-BD00-FF0CBBCBFEF6}'
-2021-03-02T14:56:00.155+07:00| inst-build-10952284| I2: UpdateTeamingState: adapter NOT GARP
-2021-03-02T14:56:00.155+07:00| inst-build-109522
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since Twenty Nineteen 1.0
+ */
+?><!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
+
+		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
+
+			<div class="site-branding-container">
+				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+			</div><!-- .site-branding-container -->
+
+			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
+				<div class="site-featured-image">
+					<?php
+						twentynineteen_post_thumbnail();
+						the_post();
+						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
+
+						$classes = 'entry-header';
+					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
+						$classes = 'entry-header has-discussion';
+					}
+					?>
+					<div class="<?php echo $classes; ?>">
+						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+					</div><!-- .entry-header -->
+					<?php rewind_posts(); ?>
+				</div>
+			<?php endif; ?>
+		</header><!-- #masthead -->
+
+	<div id="content" class="site-content">

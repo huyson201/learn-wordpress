@@ -1,96 +1,93 @@
- cheii cu proprietarul
-    cheii în persoană, că aţi verificat folosind un document dificil de
-    falsificat cu poză (cum ar fi un paşaport) că numele proprietarului cheii
-    este acelaşi cu numele ID-ului utilizator al cheii şi că aţi verificat
-    (schimbând emailuri) că adresa de email de pe cheie aparţine proprietarului
-cheii.
+<?php
+/**
+ * Blogdot Theme Customizer
+ *
+ * @package Blogdot
+ */
 
-De notat că exemplele date pentru nivelele 2 şi 3 ceva mai sus sunt *numai*
-exemple. La urma urmei, d-voastră decideţi ce înseamnă "superficial" şi
-"extensiv" pentru d-voastră când semnaţi alte chei.
+/**
+ * Add postMessage support for site title and description for the Theme Customizer.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function blogdot_customize_register( $wp_customize ) {
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-Dacă nu ştiţi care este răspunsul, răspundeţi "0".
-.
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => '.site-title a',
+			'render_callback' => 'blogdot_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '.site-description',
+			'render_callback' => 'blogdot_customize_partial_blogdescription',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdot_cover_title', array(
+			'selector'         => '.bd-cover-title',
+			'render_callback' => 'blogdot_customize_partial_cover_title',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdot_cover_subtitle', array(
+			'selector'         => '.bd-cover-subtitle',
+			'render_callback' => 'blogdot_customize_partial_cover_subtitle',
+		) );
+	}
 
-.gpg.change_passwd.empty.okay
-Răspundeţi "da" sau "nu"
-.
+	include get_template_directory() . '/inc/customizer/theme-options.php';
+}
+add_action( 'customize_register', 'blogdot_customize_register' );
 
-.gpg.keyedit.save.okay
-Răspundeţi "da" sau "nu"
-.
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @return void
+ */
+function blogdot_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
 
-.gpg.keyedit.cancel.okay
-Răspundeţi "da" sau "nu"
-.
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @return void
+ */
+function blogdot_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
 
-.gpg.keyedit.sign_all.okay
-Răspundeţi "da" dacă doriţi să semnaţi TOATE ID-urile utilizator
-.
+function blogdot_customize_partial_cover_title() {
+	echo get_theme_mod( 'blogdot_cover_title' );
+}
+function blogdot_customize_partial_cover_subtitle() {
+	echo get_theme_mod( 'blogdot_cover_subtitle' );
+}
 
-.gpg.keyedit.remove.uid.okay
-Răspundeţi "da" dacă într-adevăr doriţi să ştergeţi acest ID utilizator.
-Toate certificatele sunt de asemenea pierdute!
-.
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function blogdot_customize_preview_js() {
+	wp_enqueue_script( 'blogdot-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+}
+add_action( 'customize_preview_init', 'blogdot_customize_preview_js' );
 
-.gpg.keyedit.remove.subkey.okay
-Răspundeţi "da" dacă este OK să ştergeţi subcheia
-.
 
-.gpg.keyedit.delsig.valid
-Aceasta este o semnătură validă pe cheie; în mod normal n-ar trebui
-să ştergeţi această semnătură pentru că aceasta ar putea fi importantăla stabilirea conexiunii de încredere la cheie sau altă cheie certificată
-de această cheie.
-.
+// Add Styles to the Customizer
+function blogdot_customizer_css()
+{
+	wp_enqueue_style( 'blogdot-customizer-css', get_template_directory_uri() . '/inc/customizer/customizer.css' );
+}
+add_action( 'customize_controls_print_styles', 'blogdot_customizer_css' );
 
-.gpg.keyedit.delsig.unknown
-Această semnătură nu poate fi verificată pentru că nu aveţi cheia
-corespunzătoare.  Ar trebui să amânaţi ştergerea sa până ştiţi care
-cheie a fost folosită pentru că această cheie de semnare ar putea
-constitui o conexiune de încredere spre o altă cheie deja certificată.
-.
 
-.gpg.keyedit.delsig.invalid
-Semnătura nu este validă.  Aceasta ar trebui ştearsă de pe inelul
-d-voastră de chei.
-.
-
-.gpg.keyedit.delsig.selfsig
-Aceasta este o semnătură care leagă ID-ul utilizator de cheie.
-De obicei nu este o idee bună să ştergeţi o asemenea semnătură.
-De fapt, GnuPG ar putea să nu mai poată folosi această cheie.
-Aşa că faceţi acest lucru numai dacă această auto-semnătură este
-dintr-o oarecare cauză invalidă şi o a doua este disponibilă.
-.
-
-.gpg.keyedit.updpref.okay
-Schimbaţi toate preferinţele ale tuturor ID-urilor utilizator (sau doar
-cele selectate) conform cu lista curentă de preferinţe.  Timestamp-urile
-tuturor auto-semnăturilor afectate vor fi avansate cu o secundă.
-
-.
-
-.gpg.passphrase.enter
-Vă rugăm introduceţi fraza-parolă; aceasta este o propoziţie secretă 
-
-.
-
-.gpg.passphrase.repeat
-Vă rugăm repetaţi ultima frază-parolă, pentru a fi sigur(ă) ce aţi tastat.
-.
-
-.gpg.detached_signature.filename
-Daţi numele fişierului la care se aplică semnătura
-.
-
-.gpg.openfile.overwrite.okay
-Răspundeţi "da" dacă este OK să suprascrieţi fişierul
-.
-
-.gpg.openfile.askoutname
-Vă rugăm introduceţi un nou nume-fişier. Dacă doar apăsaţi RETURN,
-va fi folosit fişierul implicit (arătat în paranteze).
-.
-
-.gpg.ask_revocation_reason.code
-Ar trebui să specificaţi un motiv pentru cert
+// Custom CSS output for theme options
+function blogdot_custom_css_output() { ?>
+	<style type="text/css" id="custom-theme-css">
+		.custom-logo { height: <?php echo esc_html( get_theme_mod( 'blogdot_logo_height', '60' ) ); ?>px; width: auto; }
+		<?php if( get_theme_mod( 'blogdot_display_cover_section', true ) ) { ?>
+			.home.blog .site-header {border-bottom-width: 0px;}
+		<?php } ?>
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'blogdot_custom_css_output');

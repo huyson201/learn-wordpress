@@ -779,7 +779,7 @@ function get_default_post_to_edit($post_type = 'post', $create_in_db = false)
  * @param string $type    Optional post type.
  * @return int Post ID if post exists, 0 otherwise.
  */
-function post_exists($title, $content = '', $date = '', $type = '', $email = '')
+function post_exists($title, $content = '', $date = '', $type = '')
 {
 	global $wpdb;
 
@@ -787,7 +787,7 @@ function post_exists($title, $content = '', $date = '', $type = '', $email = '')
 	$post_content = wp_unslash(sanitize_post_field('post_content', $content, 0, 'db'));
 	$post_date    = wp_unslash(sanitize_post_field('post_date', $date, 0, 'db'));
 	$post_type    = wp_unslash(sanitize_post_field('post_type', $type, 0, 'db'));
-	$post_email = wp_unslash(sanitize_post_field('post_email', $email, 0, 'db'));
+
 	$query = "SELECT ID FROM $wpdb->posts WHERE 1=1";
 	$args  = array();
 
@@ -799,11 +799,6 @@ function post_exists($title, $content = '', $date = '', $type = '', $email = '')
 	if (!empty($title)) {
 		$query .= ' AND post_title = %s';
 		$args[] = $post_title;
-	}
-
-	if (!empty($email)) {
-		$query .= ' AND post_email = %s';
-		$args[] = $post_email;
 	}
 
 	if (!empty($content)) {

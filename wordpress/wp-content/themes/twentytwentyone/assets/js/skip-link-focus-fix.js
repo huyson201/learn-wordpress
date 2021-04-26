@@ -1,25 +1,33 @@
-" Vim syntax file
-" Language:	Dracula
-" Maintainer:	Scott Bordelon <slb@artisan.com>
-" Last change:  Wed Apr 25 18:50:01 PDT 2001
-" Extensions:   drac.*,*.drac,*.drc,*.lvs,*.lpe
-" Comment:      Dracula is an industry-standard language created by CADENCE (a
-"		company specializing in Electronics Design Automation), for
-"		the purposes of Design Rule Checking, Layout vs. Schematic
-"		verification, and Layout Parameter Extraction.
+/**
+ * File skip-link-focus-fix.js.
+ *
+ * Helps with accessibility for keyboard only users.
+ *
+ * This is the source file for what is minified in the twenty_twenty_one_skip_link_focus_fix() PHP function.
+ *
+ * Learn more: https://git.io/vWdr2
+ */
+( function() {
+	var isIe = /(trident|msie)/i.test( navigator.userAgent );
 
-" quit when a syntax file was already loaded
-if exists("b:current_syntax")
-  finish
-endif
+	if ( isIe && document.getElementById && window.addEventListener ) {
+		window.addEventListener( 'hashchange', function() {
+			var id = location.hash.substring( 1 ),
+				element;
 
-" Ignore case
-syn case ignore
+			if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+				return;
+			}
 
-" A bunch of useful Dracula keywords
+			element = document.getElementById( id );
 
-"syn match   draculaIdentifier
+			if ( element ) {
+				if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+					element.tabIndex = -1;
+				}
 
-syn keyword draculaStatement   indisk primary outdisk printfile system
-syn keyword draculaStatement   mode scale resolution listerror keepdata
-syn keyword draculaStatement 
+				element.focus();
+			}
+		}, false );
+	}
+}() );

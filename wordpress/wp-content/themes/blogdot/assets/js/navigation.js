@@ -1,99 +1,106 @@
-é par un échange de
-courrier électronique).
+/**
+ * File navigation.js.
+ *
+ * Handles toggling the navigation menu for small screens and enables TAB key
+ * navigation support for dropdown menus.
+ */
+( function() {
+	var container, button, menu, links, i, len;
 
-Notez bien que les exemples donnés ci-dessus pour les niveaux 2 et
-3 ne sont *que* des exemples.
-C'est à vous de décider quelle valeur mettre quand vous signez
-les clés des autres personnes.
+	container = document.getElementById( 'site-navigation' );
+	if ( ! container ) {
+		return;
+	}
 
-Si vous ne savez pas quelle réponse est la bonne, répondez "0".
-.
+	button = container.getElementsByTagName( 'button' )[0];
+	if ( 'undefined' === typeof button ) {
+		return;
+	}
 
-.gpg.change_passwd.empty.okay
-Répondez «oui» ou «non»
-.
+	menu = container.getElementsByTagName( 'ul' )[0];
 
-.gpg.keyedit.save.okay
-Répondez «oui» ou «non»
-.
+	// Hide menu toggle button if menu is empty and return early.
+	if ( 'undefined' === typeof menu ) {
+		button.style.display = 'none';
+		return;
+	}
 
-.gpg.keyedit.cancel.okay
-Répondez «oui» ou «non»
-.
+	menu.setAttribute( 'aria-expanded', 'false' );
+	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
+		menu.className += ' nav-menu';
+	}
 
-.gpg.keyedit.sign_all.okay
-Répondez «oui» si vous voulez signer TOUS les noms d'utilisateurs
-.
+	button.onclick = function() {
+		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
+			container.className = container.className.replace( ' toggled', '' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+		} else {
+			container.className += ' toggled';
+			button.setAttribute( 'aria-expanded', 'true' );
+			menu.setAttribute( 'aria-expanded', 'true' );
+		}
+	};
 
-.gpg.keyedit.remove.uid.okay
-Répondez «oui» si vous voulez vraiment supprimer ce nom
-d'utilisateur. Tous les certificats seront alors perdus en même temps !
-.
+	// Get all the link elements within the menu.
+	links    = menu.getElementsByTagName( 'a' );
 
-.gpg.keyedit.remove.subkey.okay
-Répondez «oui» s'il faut vraiment supprimer la sous-clé
-.
+	// Each time a menu link is focused or blurred, toggle focus.
+	for ( i = 0, len = links.length; i < len; i++ ) {
+		links[i].addEventListener( 'focus', toggleFocus, true );
+		links[i].addEventListener( 'blur', toggleFocus, true );
+	}
 
-.gpg.keyedit.delsig.valid
-C'est une signature valide dans la clé; vous n'avez pas normalement
-intérêt à supprimer cette signature car elle peut être importante pour
-établir une connection de confiance vers la clé ou une autre clé certifiée
-par celle-là.
-.
+	/**
+	 * Sets or removes .focus class on an element.
+	 */
+	function toggleFocus() {
+		var self = this;
 
-.gpg.keyedit.delsig.unknown
-Cette signature ne peut pas être vérifiée parce que vous n'avez pas la
-clé correspondante. Vous devriez remettre sa supression jusqu'à ce que
-vous soyez sûr de quelle clé a été utilisée car cette clé de signature
-peut établir une connection de confiance vers une autre clé déjà certifiée.
-.
+		// Move up through the ancestors of the current link until we hit .nav-menu.
+		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
 
-.gpg.keyedit.delsig.invalid
-Cette signature n'est pas valide. Vous devriez la supprimer de votre
-porte-clés.
-.
+			// On li elements toggle the class .focus.
+			if ( 'li' === self.tagName.toLowerCase() ) {
+				if ( -1 !== self.className.indexOf( 'focus' ) ) {
+					self.className = self.className.replace( ' focus', '' );
+				} else {
+					self.className += ' focus';
+				}
+			}
 
-.gpg.keyedit.delsig.selfsig
-Cette signature relie le nom d'utilisateur à la clé. Habituellement
-enlever une telle signature n'est pas une bonne idée. En fait GnuPG peut
-ne plus être capable d'utiliser cette clé. Donc faites ceci uniquement si
-cette auto-signature est invalide pour une certaine raison et si une autre
-est disponible.
-.
+			self = self.parentElement;
+		}
+	}
 
-.gpg.keyedit.updpref.okay
-Changer les préférences de tous les noms d'utilisateurs (ou juste
-ceux qui sont sélectionnés) vers la liste actuelle. La date de toutes
-les auto-signatures affectées seront avancées d'une seconde.
+	/**
+	 * Toggles `focus` class to allow submenu access on tablets.
+	 */
+	( function( container ) {
+		var touchStartFn, i,
+			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
-.
+		if ( 'ontouchstart' in window ) {
+			touchStartFn = function( e ) {
+				var menuItem = this.parentNode, i;
 
-.gpg.passphrase.enter
-Entrez le mot de passe ; c'est une phrase secrète 
+				if ( ! menuItem.classList.contains( 'focus' ) ) {
+					e.preventDefault();
+					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
+						if ( menuItem === menuItem.parentNode.children[i] ) {
+							continue;
+						}
+						menuItem.parentNode.children[i].classList.remove( 'focus' );
+					}
+					menuItem.classList.add( 'focus' );
+				} else {
+					menuItem.classList.remove( 'focus' );
+				}
+			};
 
-.
-
-.gpg.passphrase.repeat
-Répétez la dernière phrase de passe pour être sûr de ce que vous
-avez tapé.
-.
-
-.gpg.detached_signature.filename
-Donnez le nom du fichier auquel la signature se rapporte
-.
-
-.gpg.openfile.overwrite.okay
-Répondez «oui» s'il faut vraiment réécrire le fichier
-.
-
-.gpg.openfile.askoutname
-Entrez le nouveau nom de fichier. Si vous tapez simplement ENTRÉE le
-fichier par défaut (indiqué entre crochets) sera utilisé.
-.
-
-.gpg.ask_revocation_reason.code
-Vous devriez donner une raison pour la certification. Selon le contexte
-vous pouvez choisir dans cette liste:
-  «La clé a été compromise»
-      Utilisez cette option si vous avez une raison de croire que des
-      personnes ont pu accéder à votre clé secrète sa
+			for ( i = 0; i < parentLink.length; ++i ) {
+				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
+			}
+		}
+	}( container ) );
+} )();
