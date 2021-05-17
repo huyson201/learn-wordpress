@@ -626,4 +626,10 @@ function twentytwentyone_add_ie_class() {
 	</script>
 	<?php
 }
+
+
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+function custom_add_cart_button () {
+    add_action( 'woocommerce_after_shop_loop_item_title','woocommerce_template_loop_add_to_cart', 10 );
+}
+add_action( 'after_setup_theme', 'custom_add_cart_button' );
