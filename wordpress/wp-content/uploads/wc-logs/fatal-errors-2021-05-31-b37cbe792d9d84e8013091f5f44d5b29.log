@@ -1,0 +1,68 @@
+2021-05-31T07:25:30+00:00 CRITICAL syntax error, unexpected end of file, expecting "(" in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php on line 702
+
+2021-05-31T07:26:25+00:00 CRITICAL Uncaught Error: Call to a member function get_rating_count() on string in E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\rating.php:28
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1563): wc_get_template('single-product/...')
+#2 E:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(292): woocommerce_template_single_rating('')
+#3 E:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#4 E:\xampp\htdocs\wordpress\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#5 E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\single-product.php(2): do_action('woocommerce_sin...')
+#6 E:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('E:\\xampp\\htdocs...')
+#8 E:\xampp\htdocs\wordpress\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\rating.php on line 28
+
+2021-05-31T07:27:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php on line 701 and at least 2 expected in E:\xampp\htdocs\wordpress\wp-includes\plugin.php:409
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php(701): add_action('woocommerce_sin...')
+#1 E:\xampp\htdocs\wordpress\wp-settings.php(528): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\wordpress\wp-config.php(90): require_once('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\wordpress\wp-load.php(37): require_once('E:\\xampp\\htdocs...')
+#4 E:\xampp\htdocs\wordpress\wp-blog-header.php(13): require_once('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\wordpress\index.php(17): require('E:\\xampp\\htdocs...')
+#6 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-includes\plugin.php on line 409
+
+2021-05-31T07:27:31+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php on line 701 and at least 2 expected in E:\xampp\htdocs\wordpress\wp-includes\plugin.php:409
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php(701): add_action('woocommerce_sin...')
+#1 E:\xampp\htdocs\wordpress\wp-settings.php(528): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\wordpress\wp-config.php(90): require_once('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\wordpress\wp-load.php(37): require_once('E:\\xampp\\htdocs...')
+#4 E:\xampp\htdocs\wordpress\wp-admin\admin-ajax.php(22): require_once('E:\\xampp\\htdocs...')
+#5 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-includes\plugin.php on line 409
+
+2021-05-31T07:27:47+00:00 CRITICAL Uncaught Error: Call to a member function get_rating_count() on string in E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\rating.php:28
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1563): wc_get_template('single-product/...')
+#2 E:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(292): woocommerce_template_single_rating('')
+#3 E:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#4 E:\xampp\htdocs\wordpress\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#5 E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\single-product.php(2): do_action('woocommerce_sin...')
+#6 E:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include('E:\\xampp\\htdocs...')
+#7 E:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('E:\\xampp\\htdocs...')
+#8 E:\xampp\htdocs\wordpress\index.php(17): require('E:\\xampp\\htdocs...')
+#9 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\templates\single-product\rating.php on line 28
+
+2021-05-31T07:30:39+00:00 CRITICAL Uncaught Error: Call to a member function get_review_count() on string in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\single-product.php:32
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-includes\template-loader.php(106): include()
+#1 E:\xampp\htdocs\wordpress\wp-blog-header.php(19): require_once('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\wordpress\index.php(17): require('E:\\xampp\\htdocs...')
+#3 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\single-product.php on line 32
+
+2021-05-31T08:42:15+00:00 CRITICAL Uncaught Error: Failed opening required 'E:\xampp\htdocs\wordpress/wp-content/themes/newstore/classes/class-twenty-twenty-one-svg-icons.php' (include_path='\xampp\php\PEAR') in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php:535
+Stack trace:
+#0 E:\xampp\htdocs\wordpress\wp-settings.php(528): include()
+#1 E:\xampp\htdocs\wordpress\wp-config.php(90): require_once('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\wordpress\wp-load.php(37): require_once('E:\\xampp\\htdocs...')
+#3 E:\xampp\htdocs\wordpress\wp-admin\admin-ajax.php(22): require_once('E:\\xampp\\htdocs...')
+#4 {main}
+  thrown in E:\xampp\htdocs\wordpress\wp-content\themes\twentytwentyone\functions.php on line 535
+
